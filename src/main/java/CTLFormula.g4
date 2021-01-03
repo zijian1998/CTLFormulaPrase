@@ -1,71 +1,12 @@
-grammar CTLFormula;      // 定义一个名为Hello的语法，名字与文件名一致
+grammar CTLFormula;      // 定义一个语法，名字与文件名一致
 //parser
 parse:  formula EOF
 ;
-//formula:    atom        // 原子属性
-//            | imp
-//            | or
-//            | and
-//            | not
-//            | until
-//            | ax
-//            | ex
-//            | af
-//            | ef
-//            | ag
-//            | eg
-//            | au
-//            | eu
-//;
-//atom:     TRUE
-//        | FALSE
-//        | ATOM
-//;
-//imp:        IMP formula+
-//        | '(' formula IMP formula ')'
-//;
-//or:       OR formula+
-//        | '(' formula OR formula ')'
-//;
-//and:      AND formula+
-//        |   '(' formula AND formula')'
-//;
-//not:     NOT formula
-//        | '(' NOT formula ')'
-//;
-//until:      U formula+
-//        |   '[' formula U formula ']'
-//;
-//ax:      A X formula
-//        |   '(' A X formula')'
-//;
-//ex:      E X formula
-//        |   '(' E X formula')'
-//;
-//af:      A F formula
-//        |   '(' A F formula')'
-//;
-//ef:      E F formula
-//        |   '(' E F formula')'
-//;
-//ag:      A G formula
-//        |   '(' A G formula ')'
-//;
-//eg:      E G formula
-//        |   '(' E G formula ')'
-//;
-//au:      A '[' formula U formula ']'
-//        |   '(' A '[' formula U formula ']' ')'
-//;
-//eu:      E '[' formula U formula ']'
-//        |   '(' E '[' formula U formula ']' ')'
-//;
-//
 formula:       TRUE
         |   FALSE
 
-        |   formula IMP formula         # imp
-        |   '(' formula IMP formula ')'     # impp
+        |   formula IMP formula
+        |   '(' formula IMP formula ')'
 
         |   formula OR formula
         |   '(' formula OR formula ')'

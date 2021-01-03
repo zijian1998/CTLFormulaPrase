@@ -1,0 +1,12 @@
+nf
+1 AG
+2 IMP
+3 T1
+4 AF
+5 C1
+sf
+1 2
+2 3,4
+3 nil
+4 5
+5 nil
